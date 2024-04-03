@@ -9,7 +9,7 @@ const Teams = () => {
     // Fetch teams data from the API endpoint
     const fetchTeams = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/api/team');
+        const response = await axios.get('https://heli-verse-full-stack-assignment-backend.onrender.com/api/team');
         setTeams(response.data);
         console.log(response.data);
       } catch (error) {

@@ -35,14 +35,14 @@ const Users = () => {
       // Dispatch an action to update the team members with the selected members
       // Here, you would typically send an API request to save the changes to the server
       console.log("Selected Members:", teamMembers);
-      const response = await axios.post('http://localhost:8080/api/team',{selectedMembers: teamMembers})
+      const response = await axios.post('https://heli-verse-full-stack-assignment-backend.onrender.com/api/team',{selectedMembers: teamMembers})
       // Dispatch action to update team members in Redux store
       // dispatch(updateTeamMembers(selectedMembers));
   };
 
   const fetchUser = async() => {
     // const response = await axios.get('http://localhost:8080/api/users',{ page: currentPage});
-    const response = await axios.get(`http://localhost:8080/api/users/?page=${currentPage}`, {
+    const response = await axios.get(`https://heli-verse-full-stack-assignment-backend.onrender.com/api/users/?page=${currentPage}`, {
             params: {
                 domain: domainFilter,
                 gender: genderFilter,

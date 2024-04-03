@@ -99,7 +99,7 @@ const Member = ()=> {
 
     const deleteUser = async () => {
         try {
-            const response = await axios.delete(`http://localhost:8080/api/users/${id}`);
+            const response = await axios.delete(`https://heli-verse-full-stack-assignment-backend.onrender.com/api/users/${id}`);
             console.log('User deleted successfully:', response.data);
             // Handle success scenario, e.g., show a success message
             navigate('/api/users'); // Redirect to home page or any other page
@@ -110,7 +110,7 @@ const Member = ()=> {
     }
 
     const getMember = async () => {
-        const response = await axios.get(`http://localhost:8080/api/users/${curr_id}`, {});
+        const response = await axios.get(`https://heli-verse-full-stack-assignment-backend.onrender.com/api/users/${curr_id}`, {});
         console.log("response")
         console.log(response.data[0])
         setMember(response.data[0])
@@ -121,7 +121,7 @@ const Member = ()=> {
         e.preventDefault();
 
         try {
-            const response = await axios.put(`http://localhost:8080/api/users/${id}`, {
+            const response = await axios.put(`https://heli-verse-full-stack-assignment-backend.onrender.com/api/users/${id}`, {
                 // member._id,
                 id,
                 first_name,

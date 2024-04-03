@@ -16,7 +16,7 @@ const Login = () => {
 
   const loginUser = async(e) => {
     e.preventDefault();
-    const response = await axios.post('http://localhost:8080/login', {
+    const response = await axios.post('https://heli-verse-full-stack-assignment-backend.onrender.com/login', {
     email:email,
     password:password,
   });

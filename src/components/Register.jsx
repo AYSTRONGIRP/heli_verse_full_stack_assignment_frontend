@@ -16,7 +16,7 @@ const Register = () => {
     e.preventDefault();
     const response = await axios({
       method: 'POST',
-      url: 'http://localhost:8080/register',
+      url: 'https://heli-verse-full-stack-assignment-backend.onrender.com/register',
       data:{
         name:name,
         email:email,
